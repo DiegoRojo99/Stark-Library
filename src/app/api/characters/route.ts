@@ -24,7 +24,7 @@ export async function GET(request: Request) {
   } 
   catch (error) {
     return new Response(
-      JSON.stringify({ error: 'Failed to fetch Marvel data' }),
+      JSON.stringify({ error: (error as Error).message }),
       {
         status: 500,
         headers: {

@@ -21,9 +21,11 @@ const Characters = () => {
 
       setCharacters(data.data.results);
       setTotalPages(Math.ceil(data.data.total / 12));
-    } catch (error) {
-      setError('Failed to fetch characters');
-    } finally {
+    } 
+    catch (error: unknown) {
+      setError((error as Error).message);
+    } 
+    finally {
       setLoading(false);
     }
   };
