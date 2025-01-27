@@ -2,16 +2,16 @@ import crypto from 'crypto';
 
 const publicKey = process.env.MARVEL_PUBLIC_KEY!;
 const privateKey = process.env.MARVEL_PRIVATE_KEY!;
-const baseURL = process.env.MARVEL_API_BASE_URL!;
 
-export const fetchMarvelData = async (endpoint: string) => {
+export const fetchMarvelData = async (endpoint: string, queryParams: Record<string, string>) => {
   const ts = Date.now().toString();
   const hash = crypto
     .createHash('md5')
     .update(ts + privateKey + publicKey)
     .digest('hex');
 
-  const url = `${baseURL}${endpoint}?ts=${ts}&apikey=${publicKey}&hash=${hash}`;
+  const queryString = new URLSearchParams(queryParams).toString();
+  const url = `https://gateway.marvel.com/v1/public/${endpoint}?${queryString}&ts=${ts}&apikey=${publicKey}&hash=${hash}`;
 
   try {
     const res = await fetch(url);
