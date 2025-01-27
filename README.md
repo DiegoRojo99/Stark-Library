@@ -1,36 +1,35 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Stark Library
 
-## Getting Started
+Stark Library is a Marvel character exploration app built with Next.js. It allows users to view detailed information about their favorite Marvel characters, including names, descriptions, and images.
 
-First, run the development server:
+## Current Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Character Listings**: 
+  - Displays a grid of Marvel characters fetched from the Marvel API.
+  - Each character is displayed in a card format with relevant details such as name, description, and image.
+  - The characters are fetched dynamically, supporting pagination for easy navigation through the character database.
+  - Users can navigate through different pages of the characters list.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Future Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Search Functionality**:
+  - Allow users to search characters by name or other attributes.
+  
+- **Filtering**:
+  - Implement filters to allow users to narrow down character listings by criteria such as comics, events, or series.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Character Details Page**:
+  - Add a dedicated page for each character, showing more in-depth details about the character's backstory, appearance, and other media appearances.
 
-## Learn More
+- **Dark Mode**:
+  - Implement a dark mode theme for a better user experience.
 
-To learn more about Next.js, take a look at the following resources:
+- **Favorites**:
+  - Allow users to favorite characters and view their favorite list.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Technology Stack
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Next.js**: Framework for building the app.
+- **Tailwind CSS**: Utility-first CSS framework for styling.
+- **Marvel API**: Fetches character data.
+- **Vercel**: Hosting and deployment platform.
