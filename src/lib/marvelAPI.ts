@@ -1,8 +1,8 @@
 import { Character } from '@/app/types';
 import crypto from 'crypto';
 
-const publicKey = process.env.MARVEL_PUBLIC_KEY!;
-const privateKey = process.env.MARVEL_PRIVATE_KEY!;
+const publicKey = process.env.NEXT_PUBLIC_MARVEL_PUBLIC_KEY!;
+const privateKey = process.env.NEXT_PUBLIC_MARVEL_PRIVATE_KEY!;
 
 const cache = new Map<string, { data: Character[]; timestamp: number }>();
 const CACHE_EXPIRATION_TIME = 86400000;
