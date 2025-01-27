@@ -21,17 +21,17 @@ const LandingPage = () => {
         </p>
         <div className="mt-8 flex justify-center space-x-4">
           <a
-            href="/comics"
+            href="/characters"
             className="inline-block bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-500 text-lg"
           >
-            Explore Comics
+            Explore Characters
           </a>
-          <a
+          {/* <a
             href="/events"
             className="inline-block bg-green-600 text-white py-3 px-6 rounded-lg hover:bg-green-500 text-lg"
           >
             Discover Events
-          </a>
+          </a> */}
         </div>
       </div>
     </div>
