@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import CharacterCard from './CharacterCard';
 import { Character } from '../types';
+import Pagination from '@/components/Pagination';
 
 const Characters = () => {
   const [characters, setCharacters] = useState<Character[]>([]);
@@ -47,23 +48,13 @@ const Characters = () => {
           ))}
         </div>
       )}
-      <div className="flex justify-center mt-6 space-x-4">
-        <button
-          className="px-4 py-2 bg-blue-500 text-white rounded-lg disabled:bg-gray-300"
-          onClick={() => setPage((prev) => Math.max(prev - 1, 1))}
-          disabled={page === 1}
-        >
-          Previous
-        </button>
-        <span className="px-4 py-2 text-lg">{page}</span>
-        <button
-          className="px-4 py-2 bg-blue-500 text-white rounded-lg disabled:bg-gray-300"
-          onClick={() => setPage((prev) => Math.min(prev + 1, totalPages))}
-          disabled={page === totalPages}
-        >
-          Next
-        </button>
-      </div>
+      
+      {/* Pagination component */}
+      <Pagination
+        currentPage={page}
+        totalPages={totalPages}
+        onPageChange={setPage}
+      />
     </div>
   );
 };
