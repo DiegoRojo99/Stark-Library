@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const LandingPage = () => {
@@ -20,18 +21,18 @@ const LandingPage = () => {
           favorite stories now.
         </p>
         <div className="mt-8 flex justify-center space-x-4">
-          <a
+          <Link
             href="/characters"
             className="inline-block bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-500 text-lg"
           >
             Explore Characters
-          </a>
-          {/* <a
-            href="/events"
+          </Link>
+          {/* <Link
+            href="/comics"
             className="inline-block bg-green-600 text-white py-3 px-6 rounded-lg hover:bg-green-500 text-lg"
           >
-            Discover Events
-          </a> */}
+            Discover Comics
+          </Link> */}
         </div>
       </div>
     </div>
