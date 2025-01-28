@@ -1,4 +1,4 @@
-import { fetchMarvelData } from '@/lib/marvelAPI';
+import { fetchMarvelData } from '@/utils/marvelAPI';
 
 export async function GET(request: Request) {
   const url = new URL(request.url);
