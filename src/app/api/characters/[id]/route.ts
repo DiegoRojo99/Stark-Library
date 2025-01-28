@@ -21,7 +21,9 @@ export async function GET(req: Request, context: context) {
       comics
     }
     return NextResponse.json(data);
-  } catch (error) {
-    return NextResponse.json({ error: 'Failed to fetch character details.' }, { status: 500 });
+  } 
+  catch (error) {
+    const errorMessage = (error as Error).message;
+    return NextResponse.json({ error: `Failed to fetch character details. ${errorMessage}` }, { status: 500 });
   }
 }
