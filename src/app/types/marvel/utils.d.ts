@@ -24,6 +24,7 @@ export type TextObject = {
 export type Summary = {
   resourceURI: string;
   name: string;
+  type: string?
 };
 
 export type ComicDate = {
